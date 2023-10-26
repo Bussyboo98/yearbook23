@@ -1,0 +1,216 @@
+{% extends 'client/base.html' %}
+{% load static %}
+<!DOCTYPE html>
+
+{% block title%}
+Home
+{% endblock %}
+
+{% block content %}
+    <div class="site-blocks-cover overlay" style="background-image: url('{% static 'images/banner.jpg' %}');" data-aos="fade" data-stellar-background-ratio="0.5" data-aos="fade">
+      <div class="container">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-md-8 text-center" data-aos="fade-up" data-aos-delay="400">
+            <h1 class="mb-4">Unveiling Our Yearbook Journey</h1>
+            <p class="mb-5">Preserving Memories, One Page at a Time</p>
+            <p><a href="#" class="btn btn-primary px-5 py-3">Explore the Yearbook</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container">
+      <div class="featured-property-half d-flex">
+        <div class="image" style="background-image: url('{% static 'images/ban1.jpg' %}')"></div>
+        <div class="text">
+          <h2>Yearbook Highlights</h2>
+          <p class="mb-5">A Journey Through Memories, Laughter, and Friendship</p>
+          <ul class="property-list-details mb-5">
+            <li class="text-black">Yearbook Title: <strong class="text-black">Moments in Time</strong></li>
+            <li>Pages: <strong>200</strong></li>
+            <li>Contributors: <strong>Class of 2023</strong></li>
+            <li>Theme: <strong>Navigating Life's Path</strong></li>
+            <li>Release Date: May 30, 2023<strong></strong></li>
+          </ul>
+          <p><a href="#" class="btn btn-primary px-4 py-3">Explore Yearbook</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-section">
+      <div class="container">
+        <div class="row">
+          <div class="site-section-heading text-center mb-5 w-border col-md-6 mx-auto">
+            <h2 class="mb-5">Browse Apartments</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, fugit nam obcaecati fuga itaque deserunt
+              officia, error reiciendis ab quod?</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+            <a href="#" class="unit-9">
+              <div class="image" style="background-image: url('{% static 'images/img_1.jpg' %}');"></div>
+              <div class="unit-9-content">
+                <h2>Nashville</h2>
+                <span>$130/night</span>
+                <!-- <span>with Wendy Matos</span> -->
+              </div>
+            </a>
+          </div>
+
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+            <a href="#" class="unit-9">
+              <div class="image" style="background-image: url('{% static 'images/img_2.jpg' %}');"></div>
+              <div class="unit-9-content">
+                <h2>Baltimore</h2>
+                <span>$230/night</span>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+            <a href="#" class="unit-9">
+              <div class="image" style="background-image: url('{% static 'images/img_3.jpg' %}');"></div>
+              <div class="unit-9-content">
+                <h2>Austin</h2>
+                <span>$130/night</span>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+            <a href="#" class="unit-9">
+              <div class="image" style="background-image: url('{% static 'images/img_4.jpg' %}');"></div>
+              <div class="unit-9-content">
+                <h2>Atlanta</h2>
+                <span>$150/night</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-md-12 text-center mt-5" data-aos="fade-up">
+            <a href="#" class="btn btn-primary">Browse All Apartments</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+   
+    <div class="site-section block-13">
+      <div class="container" data-aos="fade-up">
+        <div class="row">
+          <div class="site-section-heading text-center mb-5 w-border col-md-6 mx-auto">
+            <h2 class="mb-5">Love By Our Customers</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, fugit nam obcaecati fuga itaque deserunt officia, error reiciendis ab quod?</p>
+          </div>
+        </div>
+        <div class="nonloop-block-13 owl-carousel">
+          
+          <div class="text-center p-3 p-md-5 bg-white">
+            <div class="mb-4">            
+              <img src="{% static 'images/person_1.jpg' %}" alt="Image" class="w-50 mx-auto img-fluid rounded-circle">
+            </div>
+            <div class="text-black">
+              <h3 class="font-weight-light h5">Megan Smith</h3>
+              <p class="font-italic">&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, iusto. Aliquam illo, cum sed ea? Ducimus quos, ea?&rdquo;</p>
+            </div>
+          </div>
+
+          <div class="text-center p-3 p-md-5 bg-white">
+            <div class="mb-4">            
+              <img src="{% static 'images/person_2.jpg' %}" alt="Image" class="w-50 mx-auto img-fluid rounded-circle">
+            </div>
+            <div class="text-black">
+              <h3 class="font-weight-light h5">Brooke Cagle</h3>
+              <p class="font-italic">&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, iusto. Aliquam illo, cum sed ea? Ducimus quos, ea?&rdquo;</p>
+            </div>
+          </div>
+
+          <div class="text-center p-3 p-md-5 bg-white">
+            <div class="mb-4">            
+              <img src="{% static 'images/person_3.jpg' %}" alt="Image" class="w-50 mx-auto img-fluid rounded-circle">
+            </div>
+            <div class="text-black">
+              <h3 class="font-weight-light h5">Philip Martin</h3>
+              <p class="font-italic">&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, iusto. Aliquam illo, cum sed ea? Ducimus quos, ea?&rdquo;</p>
+            </div>
+          </div>
+
+          <div class="text-center p-3 p-md-5 bg-white">
+            <div class="mb-4">            
+              <img src="{% static 'images/person_1.jpg' %}" alt="Image" class="w-50 mx-auto img-fluid rounded-circle">
+            </div>
+            <div class="text-black">
+              <h3 class="font-weight-light h5">Steven Ericson</h3>
+              <p class="font-italic">&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, iusto. Aliquam illo, cum sed ea? Ducimus quos, ea?&rdquo;</p>
+            </div>
+          </div>
+
+          <div class="text-center p-3 p-md-5 bg-white">
+            <div class="mb-4">            
+              <img src="{% static 'images/person_2.jpg' %}" alt="Image" class="w-50 mx-auto img-fluid rounded-circle">
+            </div>
+            <div class="text-black">
+              <h3 class="font-weight-light h5">Nathan Dumlao</h3>
+              <p class="font-italic">&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, iusto. Aliquam illo, cum sed ea? Ducimus quos, ea?&rdquo;</p>
+            </div>
+          </div>
+
+          <div class="text-center p-3 p-md-5 bg-white">
+            <div class="mb-4">            
+              <img src="{% static 'images/person_4.jpg' %}" alt="Image" class="w-50 mx-auto img-fluid rounded-circle">
+            </div>
+            <div class="text-black">
+              <h3 class="font-weight-light h5">Brook Smith</h3>
+              <p class="font-italic">&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, iusto. Aliquam illo, cum sed ea? Ducimus quos, ea?&rdquo;</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>  
+    
+
+    
+    
+
+    <div class="site-section bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="site-section-heading text-center mb-5 w-border col-md-6 mx-auto" data-aos="fade-up">
+            <h2 class="mb-5">News &amp; Events</h2>
+            <p>
+              Stay updated with the latest news and events related to graduations and yearbook memories. Join us in celebrating achievements, memorable events, and inspiring moments of our graduating class. Get ready to create unforgettable memories with us!
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          {% if blog_key %}
+          {% for b in blog_key %}
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
+            <a href="{{b.get_blog_url}}"><img src="{{b.get_blog_image}}" alt="Image" class="img-fluid"></a>
+            <div class="p-4 bg-white">
+              <span class="d-block text-secondary small text-uppercase">{{b.get_date}}</span>
+              <h2 class="h5 text-black mb-3"><a href="{{b.get_blog_url}}">{{b.get_blog_title}}</a></h2>
+              
+            </div>
+          </div>
+         {% endfor %}
+         {% endif %}
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-primary" data-aos="fade">
+      <div class="container">
+        <div class="row">
+          <a href="#" class="col-2 text-center py-4 social-icon d-block"><span class="icon-facebook text-white"></span></a>
+          <a href="#" class="col-2 text-center py-4 social-icon d-block"><span class="icon-twitter text-white"></span></a>
+          <a href="#" class="col-2 text-center py-4 social-icon d-block"><span class="icon-instagram text-white"></span></a>
+          <a href="#" class="col-2 text-center py-4 social-icon d-block"><span class="icon-linkedin text-white"></span></a>
+          <a href="#" class="col-2 text-center py-4 social-icon d-block"><span class="icon-pinterest text-white"></span></a>
+          <a href="#" class="col-2 text-center py-4 social-icon d-block"><span class="icon-youtube text-white"></span></a>
+        </div>
+      </div>
+    </div>
+{% endblock %}

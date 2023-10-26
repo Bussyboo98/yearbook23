@@ -1,0 +1,73 @@
+{% extends 'client/base.html' %}
+{% load static %}
+<!DOCTYPE html>
+
+{% block title%}
+News & Events
+{% endblock %}
+
+{% block content %}
+    
+    <div class="site-blocks-cover inner-page-cover overlay" style="background-image: url('{% static 'images/news.jpg' %}');"
+    data-aos="fade" data-stellar-background-ratio="0.5" data-aos="fade">
+    <div class="container">
+      <div class="row align-items-center justify-content-center">
+        <div class="col-md-7 text-center" data-aos="fade-up" data-aos-delay="400">
+          <h1 class="text-white">News &amp; Events</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+    
+    <div class="site-section">
+    <div class="container">
+      <div class="row">
+        {% if post %}
+          {% for b in post %}
+        <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="100">
+          <a href="{{b.get_blog_url}}"><img src="{{b.get_blog_image}}" alt="Image" class="img-fluid"></a>
+          <div class="p-4 bg-white">
+            <span class="d-block text-secondary small text-uppercase">{{b.get_date}}</span>
+            <h2 class="h5 text-black mb-3"><a href="{{b.get_blog_url}}">{{b.get_blog_title}}</a></h2>
+          </div>
+        </div>
+        {% endfor %}
+        {% endif %}
+  
+      </div>
+  
+    </div>
+  
+    <div class="container mt-5" data-aos="fade-up">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <div class="site-block-27">
+            <ul>
+              {% if post.has_previous %}
+                <li><a href="?page=1">&lt;&lt;</a></li>
+                <li><a href="?page={{ post.previous_page_number }}">&lt;</a></li>
+              {% endif %}
+              
+              {% for num in post.paginator.page_range %}
+                <li class="{% if num == post.number %}active{% endif %}">
+                  <a href="?page={{ num }}">{{ num }}</a>
+                </li>
+              {% endfor %}
+              
+              {% if post.has_next %}
+                <li><a href="?page={{ post.next_page_number }}">&gt;</a></li>
+                <li><a href="?page={{ post.paginator.num_pages }}">&gt;&gt;</a></li>
+              {% endif %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  </div>
+
+   {% endblock %}
