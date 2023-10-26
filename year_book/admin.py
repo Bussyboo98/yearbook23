@@ -22,3 +22,12 @@ class ContactAdmin(admin.ModelAdmin):
     
     def has_add_permission(self, request):
         return False
+
+admin.site.register(Comment)
+
+from .models import Year_Book
+
+class YearBookAdmin(admin.ModelAdmin):
+    list_display = ('student_first_name', 'student_last_name', 'email', 'phone_number', 'date_of_birth', 'approve')
+
+admin.site.register(Year_Book, YearBookAdmin)

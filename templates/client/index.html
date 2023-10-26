@@ -42,54 +42,25 @@ Home
       <div class="container">
         <div class="row">
           <div class="site-section-heading text-center mb-5 w-border col-md-6 mx-auto">
-            <h2 class="mb-5">Browse Apartments</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, fugit nam obcaecati fuga itaque deserunt
-              officia, error reiciendis ab quod?</p>
+            <h2 class="mb-5">STUDENTS</h2>
+            <p>Get ready to meet the fantastic individuals who are about to conquer the world! Our graduating students are not just about books and exams; they've got stories, quirks, and dreams that will make you smile. Take a sneak peek into the lives of the Class of [Year] and discover what makes them extraordinary!</p>
           </div>
         </div>
         <div class="row">
+          {% if student_key %}
+          {% for s in student_key %}
           <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
             <a href="#" class="unit-9">
-              <div class="image" style="background-image: url('{% static 'images/img_1.jpg' %}');"></div>
+              <div class="image" style="background-image: url('{{s.student_image.url}}');"></div>
               <div class="unit-9-content">
-                <h2>Nashville</h2>
-                <span>$130/night</span>
+                <h2>{{s.student_first_name}}  {{s.student_last_name}}</h2>
+                <span>{{s.student_nick_name}}</span>
                 <!-- <span>with Wendy Matos</span> -->
               </div>
             </a>
           </div>
-
-          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
-            <a href="#" class="unit-9">
-              <div class="image" style="background-image: url('{% static 'images/img_2.jpg' %}');"></div>
-              <div class="unit-9-content">
-                <h2>Baltimore</h2>
-                <span>$230/night</span>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
-            <a href="#" class="unit-9">
-              <div class="image" style="background-image: url('{% static 'images/img_3.jpg' %}');"></div>
-              <div class="unit-9-content">
-                <h2>Austin</h2>
-                <span>$130/night</span>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
-            <a href="#" class="unit-9">
-              <div class="image" style="background-image: url('{% static 'images/img_4.jpg' %}');"></div>
-              <div class="unit-9-content">
-                <h2>Atlanta</h2>
-                <span>$150/night</span>
-              </div>
-            </a>
-          </div>
-
-          <div class="col-md-12 text-center mt-5" data-aos="fade-up">
-            <a href="#" class="btn btn-primary">Browse All Apartments</a>
-          </div>
+          {% endfor %}
+          {% endif %}
         </div>
       </div>
     </div>

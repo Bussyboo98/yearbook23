@@ -37,45 +37,33 @@ About
     </div>
   </div>
 
-    
-    <div class="site-section">
-    <div class="container" data-aos="fade-up">
+  <div class="site-section">
+    <div class="container">
       <div class="row">
         <div class="site-section-heading text-center mb-5 w-border col-md-6 mx-auto">
-          <h2 class="mb-5">Team</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, fugit nam obcaecati fuga itaque deserunt
-            officia, error reiciendis ab quod?</p>
+          <h2 class="mb-5">STUDENTS</h2>
+          <p>Get ready to meet the fantastic individuals who are about to conquer the world! Our graduating students are not just about books and exams; they've got stories, quirks, and dreams that will make you smile. Take a sneak peek into the lives of the Class of [Year] and discover what makes them extraordinary!</p>
         </div>
       </div>
       <div class="row">
-        {% if about %}
-        {% for a in about %}
-        <div class="col-md-6 col-lg-4 mb-5 mb-lg-5">
-          <div class="team-member">
-  
-            <img src="{{a.about_img}}" alt="Image" class="img-fluid">
-  
-            <div class="text">
-  
-              <h2 class="mb-2 font-weight-light h4">{{a.name}}</h2>
-              <span class="d-block mb-2 text-white-opacity-05">{{a.post}}</span>
-              <p class="mb-4">{{a.short_description}}</p>
-              <p>
-                <a href="{{a.facebook}}" class="text-white p-2"><span class="icon-facebook"></span></a>
-                <a href="{{a.twitter}}" class="text-white p-2"><span class="icon-twitter"></span></a>
-                <a href="{{a.linkedin}}" class="text-white p-2"><span class="icon-linkedin"></span></a>
-              </p>
+        {% if student_key %}
+        {% for s in student_key %}
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+          <a href="#" class="unit-9">
+            <div class="image" style="background-image: url('{{s.student_image.url}}');"></div>
+            <div class="unit-9-content">
+              <h2>{{s.student_first_name}}  {{s.student_last_name}}</h2>
+              <span>{{s.student_nick_name}}</span>
+              <!-- <span>with Wendy Matos</span> -->
             </div>
-  
-          </div>
+          </a>
         </div>
         {% endfor %}
         {% endif %}
-  
-  
       </div>
     </div>
   </div>
+  
 
     
 

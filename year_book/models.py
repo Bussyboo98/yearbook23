@@ -81,6 +81,17 @@ class Blog(models.Model):
     class Meta():
         verbose_name_plural = 'Blog'
 
+class Comment(models.Model):
+    # user = models.OneToOneField(User, on_delete=models.CASCADE)
+    user_name = models.CharField(max_length=150, verbose_name= 'User Name')
+    timestamp = models.DateTimeField(auto_now_add=True)
+    comment_content = models.TextField(verbose_name= 'Content')
+    post = models.ForeignKey(Blog, related_name='comments', on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.user_name
+
+
 class Contact_Us(models.Model):
     name = models.CharField(max_length=200)
     subject = models.CharField(max_length=50, default='complaint')
@@ -110,10 +121,10 @@ class Year_Book(models.Model):
     hobbies = models.CharField(max_length=200)
     fun_fact_about_me = models.TextField()
     favorite_quote = models.TextField()
-    twitter_handle = models.URLField(max_length=200)
-    facebook_handle = models.URLField(max_length=200)
-    github = models.URLField(max_length=200)
-    linkedin = models.CharField(max_length=200)
+    twitter_handle = models.URLField(max_length=200, blank=True)
+    facebook_handle = models.URLField(max_length=200, blank=True)
+    github = models.URLField(max_length=200, blank=True)
+    linkedin = models.CharField(max_length=200, blank=True)
     slug = models.SlugField(max_length=250, unique=True)
     time_uploaded = models.DateTimeField('date uploaded', default=datetime.now())
     approve = models.BooleanField(default=False)
