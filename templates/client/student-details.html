@@ -1,0 +1,63 @@
+{% extends 'client/base.html' %}
+{% load static %}
+<!DOCTYPE html>
+
+{% block title%}
+Meet {{ product.student_first_name }} {{ product.student_last_name }}
+{% endblock %}
+
+{% block content %}
+    
+    <div class="site-blocks-cover inner-page-cover overlay" style="background-image: url('{{product.student_image.url}}');"
+    data-aos="fade" data-stellar-background-ratio="0.5" data-aos="fade">
+    <div class="container">
+      <div class="row align-items-center justify-content-center">
+        <div class="col-md-7 text-center" data-aos="fade-up" data-aos-delay="400">
+          <h1 class="text-white">{{ product.student_first_name }} {{ product.student_last_name }}</h1>
+          <p>A.K.A {{ product.student_nick_name }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+      <div class="featured-property-half d-flex">
+        <div class="image" style="background-image: url('{{product.student_image.url}}')"></div>
+        <div class="text">
+          <h2>Student Information</h2>
+          <p class="mb-5"><q>{{product.favorite_quote}}</q>---- <em><strong>{{ product.student_first_name }} {{ product.student_last_name }}</strong></em></p>
+          <ul class="property-list-details mb-5">
+            <li class="text-black">Full Name: <strong class="text-black">{{ product.student_first_name }} {{ product.student_last_name }}</strong></li>
+            <li class="text-black">Nick Name: <strong class="text-black">{{ product.student_nick_name }}</strong></li>
+            <li class="text-black">Email: <strong class="text-black"><a href="mailto::{{product.email}}">{{ product.email }}</a></strong></li>
+            <li class="text-black">Number: <strong class="text-black">{{ product.phone_number }}</strong></li>
+            <li class="text-black">Favorite Course: <strong class="text-black">{{ product.favorite_course }}</strong></li>
+            <li class="text-black">Favorite Lecturer: <strong class="text-black">{{ product.favorite_lecturer }}</strong></li>
+            <li class="text-black">Most Challenging Course: <strong class="text-black">{{ product.most_challenging_course }}</strong></li>
+            <li class="text-black">Relationship Status: <strong class="text-black">{{ product.relationship_status }}</strong></li>
+            <li class="text-black">Date of Birth: <strong class="text-black">{{ product.date_of_birth }}</strong></li>
+            <li class="text-black">Hobbies: <strong class="text-black">{{ product.hobbies }}</strong></li>
+            <li class="text-black">Fun Fact About Me: <strong class="text-black">{{ product.fun_fact_about_me }}</strong></li>
+           
+          </ul>
+          <p><a href="contact.html" class="btn btn-primary px-4 py-3">Contact Us</a></p>
+        </div>
+      </div>
+    </div>
+
+
+    
+    
+    <div class="bg-primary mt-5" data-aos="fade">
+      <div class="container">
+        <div class="row">
+          <a href="#" class="col-2 text-center py-4 social-icon d-block"><span class="icon-facebook text-white"></span></a>
+          <a href="#" class="col-2 text-center py-4 social-icon d-block"><span class="icon-twitter text-white"></span></a>
+          <a href="#" class="col-2 text-center py-4 social-icon d-block"><span class="icon-instagram text-white"></span></a>
+          <a href="#" class="col-2 text-center py-4 social-icon d-block"><span class="icon-linkedin text-white"></span></a>
+          <a href="#" class="col-2 text-center py-4 social-icon d-block"><span class="icon-pinterest text-white"></span></a>
+          <a href="#" class="col-2 text-center py-4 social-icon d-block"><span class="icon-youtube text-white"></span></a>
+        </div>
+      </div>
+    </div>
+{% endblock %}

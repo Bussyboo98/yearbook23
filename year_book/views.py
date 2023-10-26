@@ -48,7 +48,7 @@ def contact(request):
 
 def students(request):
     products = Year_Book.objects.order_by('-time_uploaded')
-    paginator = Paginator(products, 4)
+    paginator = Paginator(products, 8)
     page_number = request.GET.get('page', 1)
 
     try:
@@ -63,7 +63,7 @@ def students(request):
 
 def student_details(request, slug):
     product = get_object_or_404(Year_Book, slug=slug)
-    return render(request, 'client/students_details.html',{'product':product})
+    return render(request, 'client/student-details.html',{'product':product})
 
 def blog(request):
     blog_post = Blog.objects.order_by('-time_uploaded')

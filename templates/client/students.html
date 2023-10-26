@@ -1,0 +1,88 @@
+{% extends 'client/base.html' %}
+{% load static %}
+<!DOCTYPE html>
+
+{% block title%}
+Students
+{% endblock %}
+
+{% block content %}
+    <div class="site-blocks-cover inner-page-cover overlay" style="background-image: url('../../static/images/gt.jpg');"
+    data-aos="fade" data-stellar-background-ratio="0.5" data-aos="fade">
+    <div class="container">
+      <div class="row align-items-center justify-content-center">
+        <div class="col-md-7 text-center" data-aos="fade-up" data-aos-delay="400">
+          <h1 class="text-white">STUDENTS</h1>
+          <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    
+    <div class="site-section">
+      <div class="container">
+        <div class="row">
+          <div class="site-section-heading text-center mb-5 w-border col-md-6 mx-auto">
+            <h2 class="mb-5">STUDENTS</h2>
+            <p>Get ready to meet the fantastic individuals who are about to conquer the world! Our graduating students are not just about books and exams; they've got stories, quirks, and dreams that will make you smile. Take a sneak peek into the lives of the Class of [Year] and discover what makes them extraordinary!</p>
+          </div>
+        </div>
+        <div class="row">
+          {% if products %}
+          {% for s in products %}
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+            <a href="{{s.get_student_url}}" class="unit-9">
+              <div class="image" style="background-image: url('{{s.student_image.url}}');"></div>
+              <div class="unit-9-content">
+                <h2>{{s.student_first_name}}  {{s.student_last_name}}</h2>
+                <span>{{s.student_nick_name}}</span>
+                <!-- <span>with Wendy Matos</span> -->
+              </div>
+            </a>
+          </div>
+          {% endfor %}
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    <div class="container mt-5" data-aos="fade-up">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <div class="site-block-27">
+            <ul>
+              {% if products.has_previous %}
+                <li><a href="?page=1">&lt;&lt;</a></li>
+                <li><a href="?page={{ products.previous_page_number }}">&lt;</a></li>
+              {% endif %}
+              
+              {% for num in products.paginator.page_range %}
+                <li class="{% if num == products.number %}active{% endif %}">
+                  <a href="?page={{ num }}">{{ num }}</a>
+                </li>
+              {% endfor %}
+              
+              {% if products.has_next %}
+                <li><a href="?page={{ products.next_page_number }}">&gt;</a></li>
+                <li><a href="?page={{ products.paginator.num_pages }}">&gt;&gt;</a></li>
+              {% endif %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="bg-primary" data-aos="fade">
+      <div class="container">
+        <div class="row">
+          <a href="#" class="col-2 text-center py-4 social-icon d-block"><span class="icon-facebook text-white"></span></a>
+          <a href="#" class="col-2 text-center py-4 social-icon d-block"><span class="icon-twitter text-white"></span></a>
+          <a href="#" class="col-2 text-center py-4 social-icon d-block"><span class="icon-instagram text-white"></span></a>
+          <a href="#" class="col-2 text-center py-4 social-icon d-block"><span class="icon-linkedin text-white"></span></a>
+          <a href="#" class="col-2 text-center py-4 social-icon d-block"><span class="icon-pinterest text-white"></span></a>
+          <a href="#" class="col-2 text-center py-4 social-icon d-block"><span class="icon-youtube text-white"></span></a>
+        </div>
+      </div>
+    </div>
+{% endblock %}

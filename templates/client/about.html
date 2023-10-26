@@ -49,7 +49,7 @@ About
         {% if student_key %}
         {% for s in student_key %}
         <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
-          <a href="#" class="unit-9">
+          <a href="{{s.get_student_url}}" class="unit-9">
             <div class="image" style="background-image: url('{{s.student_image.url}}');"></div>
             <div class="unit-9-content">
               <h2>{{s.student_first_name}}  {{s.student_last_name}}</h2>
