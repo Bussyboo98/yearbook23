@@ -1793,3 +1793,18 @@ figure figcaption {
         font-weight: bold; }
       .featured-property-half .text ul li {
         margin-bottom: 10px; }
+
+ @media only screen and (max-width: 800px) {
+  .featured-property-half .text {
+    padding: 15px;
+
+    }
+    .site-blocks-cover h1 {
+      font-weight: 900;
+      color: #fff;
+      font-size: 3rem;
+      font-weight: normal;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+  }
+  }

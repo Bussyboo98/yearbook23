@@ -32,7 +32,7 @@ Students
         <div class="row">
           {% if products %}
           {% for s in products %}
-          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-md-6 col-lg-3 mb-5" data-aos="fade-up" data-aos-delay="100">
             <a href="{{s.get_student_url}}" class="unit-9">
               <div class="image" style="background-image: url('{{s.student_image.url}}');"></div>
               <div class="unit-9-content">
@@ -72,17 +72,5 @@ Students
         </div>
       </div>
     </div>
-    
-    <div class="bg-primary" data-aos="fade">
-      <div class="container">
-        <div class="row">
-          <a href="#" class="col-2 text-center py-4 social-icon d-block"><span class="icon-facebook text-white"></span></a>
-          <a href="#" class="col-2 text-center py-4 social-icon d-block"><span class="icon-twitter text-white"></span></a>
-          <a href="#" class="col-2 text-center py-4 social-icon d-block"><span class="icon-instagram text-white"></span></a>
-          <a href="#" class="col-2 text-center py-4 social-icon d-block"><span class="icon-linkedin text-white"></span></a>
-          <a href="#" class="col-2 text-center py-4 social-icon d-block"><span class="icon-pinterest text-white"></span></a>
-          <a href="#" class="col-2 text-center py-4 social-icon d-block"><span class="icon-youtube text-white"></span></a>
-        </div>
-      </div>
-    </div>
+ 
 {% endblock %}
