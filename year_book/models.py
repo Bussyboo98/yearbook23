@@ -121,6 +121,7 @@ class Year_Book(models.Model):
     hobbies = models.CharField(max_length=200)
     fun_fact_about_me = models.TextField()
     favorite_quote = models.TextField()
+    resident_address = models.CharField(max_length=500)
     twitter_handle = models.URLField(max_length=200, blank=True)
     facebook_handle = models.URLField(max_length=200, blank=True)
     github = models.URLField(max_length=200, blank=True)
